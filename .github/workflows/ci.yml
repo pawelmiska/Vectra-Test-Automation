@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Checkout repo
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -29,7 +29,7 @@ jobs:
         pytest --html=report.html --self-contained-html
 
     - name: Upload report.html
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: test-report
         path: report.html
